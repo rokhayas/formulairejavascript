@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>javascript</title>
+	 <link rel="stylesheet" href="css/bootstrap.min.css">
+	 <link rel="stylesheet" type="text/css" href="daba.css">
+</head>
+<body>
+<div class="container" id="form_container">	
+
+<form method="POST"  name="for" onSubmit="return Verification();">
+	
+	<legend><h1>Formulaire de Contact</h1></legend>
+	 <p>
+	 	<b><label for="idnom"> NOM:</label></b><br>
+		<input type="text" name="nom" id="idnom" value="" placeholder="entrer votre nom">
+	 </p>
+	 <p>
+	 	<b><label for="idprenom"> PRENOM:</label></b><br>
+		<input type="text" name="prenom" id="idprenom" value="" placeholder="entrer votre prenom">
+	 </p>
+	 <p class="mail">
+	 	<b><label for="idemail"> EMAIL:</label></b><br>
+		<input type="email" name="email" id="idemail" value="" placeholder="entrer votre email">
+	 </p>
+	 
+	 <p>
+	 	<b>HOMME <input type="radio" name="visite" value="oui" ></b>
+     	<b>FEMME<input type="radio" name="visite" value="non" ></b>
+     </p>
+     <p>
+     	<label for="cours"><b>Cours :</b></label><br>
+     	<select name="cour">
+			<option value="0" selected>choisir votre cour</option>
+			<option value="1">Javascript</option>  
+			<option value="2">Php</option><br>
+			<option value="3">Bootstrap</option>
+			<option value="4">Wordpress</option>
+		 
+		</select>
+     </p>
+    
+     <p>
+     	<b><label><h5>Commentaire</h5></label><br></b>
+    	 <textarea name="ameliorer" value="" id="ameliorer" rows="5" cols="50"></textarea>
+    </p>
+	<button type="submit" id="envoyer" class="btn btn-success" >Envoyer</button>
+	<button type="reset" id="annuler" class="btn btn-danger" >Annuler</button>
+
+</form>
+<script type="text/javascript">
+	function Verification(){
+		
+		    
+			var alerte = "";
+			
+			if ( document.for.nom.value=="") {
+			alerte += "Il manque le Nom.  ";
+			}
+			if ( document.for.prenom.value==""){
+			alerte += "Il manque le Prenom. ";
+			} 
+			if ( document.for.email.value=="") {
+			alerte += "Il manque l email.  ";
+			}
+			if ( document.for.visite.value=="") {
+			alerte += "cocher un sexe.  ";
+			}
+			if ( document.for.cour.value=="0") {
+			alerte += "choisissez votre cours.  ";
+			}
+			
+			alert(alerte);
+			return false;
+			
+			
+			
+	}
+		
+	
+	
+</script>
+</div>
+</body>
+</html>

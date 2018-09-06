@@ -1,0 +1,32 @@
+
+.container {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    background-image: url("belle.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 20px;
+    width: 800px;
+}
+label{
+	width: 80px;
+	border:none;
+}
+input[type=text], textarea {
+    width: 50%;
+    padding: 12px;  
+    border: 1px solid #ccc;
+    border-radius: 4px; /
+    margin-top: 2px;  
+    margin-bottom: 2px; 
+    border:none;
+   }
+input[type=email]{
+    width: 50%; 
+    padding: 12px;  
+    border: 1px solid #ccc; 
+    border-radius: 4px; 
+    margin-top: 2px; 
+    margin-bottom: 2px; 
+   
+}
